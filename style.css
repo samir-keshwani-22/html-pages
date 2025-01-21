@@ -1,80 +1,109 @@
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Background and Body Styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #d89b9b;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
     display: flex;
     justify-content: center;
     align-items: center;
-
     height: 100vh;
+    color: #fff;
 }
 
+/* Login Container */
 .login-container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 40px;
+    width: 350px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
+/* Heading Styling */
 h2 {
     text-align: center;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Input Group */
+.input-group {
     margin-bottom: 20px;
 }
 
-.input-group {
-    margin-bottom: 15px;
-}
-
 .input-group label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
     display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
 }
 
+/* Input Field Styling */
 .input-group input {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
     font-size: 16px;
-}
-
-.input-group input:focus {
     outline: none;
-    border-color: #4e90dd;
+    transition: border-color 0.3s;
 }
 
+/* Input Focus Effect */
+.input-group input:focus {
+    border-color: #2575fc;
+}
+
+/* Button Styling */
 .btn {
     width: 100%;
-    padding: 10px;
-    background-color: #4e90dd;
+    padding: 14px;
+    background-color: #2575fc;
     border: none;
-    color: white;
+    color: #fff;
     font-size: 16px;
+    border-radius: 8px;
     cursor: pointer;
-    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
 }
 
+/* Button Hover Effect */
 .btn:hover {
-    background-color: #3578b8;
+    background-color: #6a11cb;
 }
 
+/* Signup Link Styling */
 .signup-link {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .signup-link a {
-    color: #4e90dd;
+    color: #2575fc;
+    font-size: 14px;
     text-decoration: none;
+    transition: text-decoration 0.3s;
 }
 
 .signup-link a:hover {
     text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 30px;
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
 }
